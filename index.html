@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Harga Royal Dream - Modern</title>
+<style>
+:root{
+  --bg: #0a0f1c;
+  --card-bg: rgba(255,255,255,0.05);
+  --accent1: #7f5cff;
+  --accent2: #00d4ff;
+  --highlight: #ffd859;
+  --text: #f9f9fb;
+  --muted: #9aa0b8;
+  --hover-bg: rgba(127,92,255,0.15);
+}
+
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,Roboto,sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  min-height:100vh;
+  padding:40px 20px;
+}
+
+.container{
+  max-width:700px;
+  width:100%;
+  background: var(--card-bg);
+  border-radius:20px;
+  padding:30px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(127,92,255,0.2), 0 0 50px rgba(0,212,255,0.1);
+}
+
+h1{
+  text-align:center;
+  font-size:32px;
+  font-weight:900;
+  background: linear-gradient(90deg,var(--accent2),var(--highlight));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:25px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 8px rgba(0,212,255,0.5);}
+  to{text-shadow:0 0 20px rgba(255,216,89,0.8);}
+}
+
+.table-wrap{
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse: collapse;
+  min-width:400px;
+}
+
+th, td{
+  padding:14px 12px;
+  text-align:left;
+}
+
+th{
+  background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  color: #fff;
+  font-weight:700;
+  font-size:16px;
+  border-radius:12px 12px 0 0;
+}
+
+tr{
+  background: rgba(255,255,255,0.05);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+tr:hover{
+  background: var(--hover-bg);
+}
+
+td.price{
+  text-align:right;
+  font-weight:700;
+  color: var(--accent2);
+}
+
+.note{
+  margin-top:20px;
+  font-size:14px;
+  text-align:center;
+  color: var(--muted);
+}
+
+@media(max-width:480px){
+  .container{
+    padding:20px;
+  }
+  h1{
+    font-size:24px;
+  }
+  th, td{
+    padding:10px;
+    font-size:14px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Daftar Harga Royal Dream</h1>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Jumlah</th><th class="price">Harga</th></tr>
+      <tr><td>100m</td><td class="price">10k</td></tr>
+      <tr><td>200m</td><td class="price">17k</td></tr>
+      <tr><td>250m</td><td class="price">20k</td></tr>
+      <tr><td>300m</td><td class="price">25k</td></tr>
+      <tr><td>400m</td><td class="price">30k</td></tr>
+      <tr><td>500m</td><td class="price">35k</td></tr>
+      <tr><td>550m</td><td class="price">40k</td></tr>
+      <tr><td>600m</td><td class="price">45k</td></tr>
+      <tr><td>700m</td><td class="price">50k</td></tr>
+      <tr><td>800m</td><td class="price">55k</td></tr>
+      <tr><td>900m</td><td class="price">60k</td></tr>
+      <tr><td>1b</td><td class="price">65k</td></tr>
+      <tr><td>1.5B</td><td class="price">100k</td></tr>
+      <tr><td>2B</td><td class="price">130k</td></tr>
+      <tr><td>3B</td><td class="price">195k</td></tr>
+      <tr><td>5B</td><td class="price">325k</td></tr>
+      <tr><td>10B</td><td class="price">640k</td></tr>
+      <tr><td>50B</td><td class="price">3175k</td></tr>
+      <tr><td>100B</td><td class="price">6300k</td></tr>
+    </table>
+  </div>
+  <div class="note">* Harga dapat berubah sewaktu-waktu. Hubungi admin untuk pemesanan.</div>
+</div>
+</body>
+</html>
