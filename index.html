@@ -29,7 +29,7 @@ body{
 }
 
 .container{
-  max-width:700px;
+  max-width:800px;
   width:100%;
   background: var(--card-bg);
   border-radius:20px;
@@ -45,8 +45,16 @@ h1{
   background: linear-gradient(90deg,var(--accent2),var(--highlight));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  margin-bottom:25px;
+  margin-bottom:10px;
   animation: glow 2s infinite alternate;
+}
+
+h2{
+  text-align:center;
+  font-size:22px;
+  font-weight:700;
+  color: var(--accent2);
+  margin-bottom:25px;
 }
 
 @keyframes glow{
@@ -54,43 +62,36 @@ h1{
   to{text-shadow:0 0 20px rgba(255,216,89,0.8);}
 }
 
-.table-wrap{
-  overflow-x:auto;
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap:15px;
 }
 
-table{
-  width:100%;
-  border-collapse: collapse;
-  min-width:400px;
+.card-item{
+  background: rgba(255,255,255,0.05);
+  border-radius:15px;
+  padding:15px;
+  text-align:center;
+  transition: 0.3s;
+  cursor:pointer;
 }
 
-th, td{
-  padding:14px 12px;
-  text-align:left;
+.card-item:hover{
+  background: var(--hover-bg);
+  transform: translateY(-3px);
 }
 
-th{
-  background: linear-gradient(90deg,var(--accent1),var(--accent2));
-  color: #fff;
+.card-item .amount{
   font-weight:700;
   font-size:16px;
-  border-radius:12px 12px 0 0;
+  margin-bottom:8px;
 }
 
-tr{
-  background: rgba(255,255,255,0.05);
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-tr:hover{
-  background: var(--hover-bg);
-}
-
-td.price{
-  text-align:right;
-  font-weight:700;
+.card-item .price{
+  font-weight:900;
   color: var(--accent2);
+  font-size:18px;
 }
 
 .note{
@@ -101,15 +102,11 @@ td.price{
 }
 
 @media(max-width:480px){
-  .container{
-    padding:20px;
-  }
   h1{
     font-size:24px;
   }
-  th, td{
-    padding:10px;
-    font-size:14px;
+  h2{
+    font-size:18px;
   }
 }
 </style>
@@ -117,29 +114,27 @@ td.price{
 <body>
 <div class="container">
   <h1>Daftar Harga Royal Dream</h1>
-  <div class="table-wrap">
-    <table>
-      <tr><th>Jumlah</th><th class="price">Harga</th></tr>
-      <tr><td>100m</td><td class="price">10k</td></tr>
-      <tr><td>200m</td><td class="price">17k</td></tr>
-      <tr><td>250m</td><td class="price">20k</td></tr>
-      <tr><td>300m</td><td class="price">25k</td></tr>
-      <tr><td>400m</td><td class="price">30k</td></tr>
-      <tr><td>500m</td><td class="price">35k</td></tr>
-      <tr><td>550m</td><td class="price">40k</td></tr>
-      <tr><td>600m</td><td class="price">45k</td></tr>
-      <tr><td>700m</td><td class="price">50k</td></tr>
-      <tr><td>800m</td><td class="price">55k</td></tr>
-      <tr><td>900m</td><td class="price">60k</td></tr>
-      <tr><td>1b</td><td class="price">65k</td></tr>
-      <tr><td>1.5B</td><td class="price">100k</td></tr>
-      <tr><td>2B</td><td class="price">130k</td></tr>
-      <tr><td>3B</td><td class="price">195k</td></tr>
-      <tr><td>5B</td><td class="price">325k</td></tr>
-      <tr><td>10B</td><td class="price">640k</td></tr>
-      <tr><td>50B</td><td class="price">3175k</td></tr>
-      <tr><td>100B</td><td class="price">6300k</td></tr>
-    </table>
+  <h2>KAISAR RD</h2>
+  <div class="grid">
+    <div class="card-item"><div class="amount">100m</div><div class="price">10k</div></div>
+    <div class="card-item"><div class="amount">200m</div><div class="price">17k</div></div>
+    <div class="card-item"><div class="amount">250m</div><div class="price">20k</div></div>
+    <div class="card-item"><div class="amount">300m</div><div class="price">25k</div></div>
+    <div class="card-item"><div class="amount">400m</div><div class="price">30k</div></div>
+    <div class="card-item"><div class="amount">500m</div><div class="price">35k</div></div>
+    <div class="card-item"><div class="amount">550m</div><div class="price">40k</div></div>
+    <div class="card-item"><div class="amount">600m</div><div class="price">45k</div></div>
+    <div class="card-item"><div class="amount">700m</div><div class="price">50k</div></div>
+    <div class="card-item"><div class="amount">800m</div><div class="price">55k</div></div>
+    <div class="card-item"><div class="amount">900m</div><div class="price">60k</div></div>
+    <div class="card-item"><div class="amount">1b</div><div class="price">65k</div></div>
+    <div class="card-item"><div class="amount">1.5B</div><div class="price">100k</div></div>
+    <div class="card-item"><div class="amount">2B</div><div class="price">130k</div></div>
+    <div class="card-item"><div class="amount">3B</div><div class="price">195k</div></div>
+    <div class="card-item"><div class="amount">5B</div><div class="price">325k</div></div>
+    <div class="card-item"><div class="amount">10B</div><div class="price">640k</div></div>
+    <div class="card-item"><div class="amount">50B</div><div class="price">3175k</div></div>
+    <div class="card-item"><div class="amount">100B</div><div class="price">6300k</div></div>
   </div>
   <div class="note">* Harga dapat berubah sewaktu-waktu. Hubungi admin untuk pemesanan.</div>
 </div>
